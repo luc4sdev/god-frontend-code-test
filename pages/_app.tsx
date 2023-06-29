@@ -1,13 +1,10 @@
-import { HelloWorld } from "../src/components/HelloWorld";
+import Index from ".";
 import "../public/css/styles.css";
-import React from "react";
 
-function HomePage() {
+
+export default function HomePage() {
+  
   return (
-    <React.StrictMode>
-      <HelloWorld />
-    </React.StrictMode>
+    <Index />
   );
 }
-
-export default HomePage;

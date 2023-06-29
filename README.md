@@ -1,51 +1,64 @@
-# Volvo Cars (Global Online Digital)
 
-## Front-end coding test (React)
+---
 
-Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
+## 💻 About 
 
-Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
+The objective of the project is to create a Volvo page with design for desktop and mobile, making it responsive and accessible. The project was created with NextJS and MUI.
 
-### Desktop
+--- 
 
-![ProductListDesktop](./docs/ProductList-Desktop.png)
+## 🚀 Project link hosted at Vercel (click to enter)
 
-### Mobile
+<a href="https://api-deslocamento-gtz3m2vkb-luc4sdev.vercel.app/" target="_blank" rel="external">
+<img src="public/images/project-image.png" height="400" width="800" alt="Imagem do Projeto">
+</a>
+<h2>Link: <a href="https://api-deslocamento-gtz3m2vkb-luc4sdev.vercel.app/" target="_blank" rel="external">Click here</a></h2>
 
-![ProductListDesktop](./docs/ProductList-Mobile.png)
 
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data and render it in the browser. The data looks like this:
+--- 
 
-```json
-[
-  {
-    "id": "xc90-recharge",
-    "modelName": "XC90 Recharge",
-    "bodyType": "suv",
-    "modelType": "plug-in hybrid",
-    "imageUrl": "/images/xc90_recharge.jpg"
-  }
-]
+## 💻 Requirements
+
+Before you begin, make sure you've met the following requirements:
+* Do you have an operating system: `<Windows / Linux / Mac>`
+* Have you installed the latest version of `NodeJS`
+
+
+## ⚙️ Installing
+
+To install, run in the terminal:
+
+npm:
+```
+npm i
 ```
 
-The product owner is telling you that you can generate the links to the learn and shop pages of each car by concatating the `id` of the car to the learn (`/learn/`) and shop (`/shop/`) urls.
+yarn:
+```
+yarn install
+```
 
-Two extra SVG icons are also provided by our designer which are stored under `docs` folder.
+## 🚀 Running the project
 
-## Requirements
+To run the project, run in the terminal:
 
-- The project is bootstraped using [Next.js](https://nextjs.org/).
-- Browser support is modern ever-green browsers.
-- Implement this design using React and Typescript.
-- Accessibility is important.
-- Code Structure and reusablity is important.
+npm:
+```
+npm run dev
+```
+yarn:
+```
+yarn dev
+```
 
-## Bonus Points:
+## 🚀 Technologies used
 
-- If you use our design system component library, [VCC-UI](https://vcc-ui.vercel.app/)
-- If you add a filter bar on the top to filter cars by `bodyType`
+The project is developed using the following technologies:
 
-## Submission
+- ReactJS <img width="20px" height="20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+- NextJS <img width="20px" height="20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+- MUI
+--- 
 
-Clone this repository to get started. Due to a number of reasons, not least privacy, you will be asked to zip your solution and mail it in, instead of submitting a pull-request. In order to maintain an unbiased reviewing process, please ensure to keep your name or other Personal Identifiable Information (PII) from the code.
+
 

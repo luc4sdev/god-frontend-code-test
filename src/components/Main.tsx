@@ -11,9 +11,11 @@ import ArrowCircleLeft from '@mui/icons-material/ArrowCircleLeft';
 import cars from '../../public/api/cars.json'
 import Image from "next/image";
 import Slider from "react-slick";
+import Link from '@mui/material/Link';
 import { useState } from "react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 
 interface MainProps {
   value: string;
@@ -55,7 +57,7 @@ export function Main({ value }: MainProps) {
       {matches ? (
         <Box sx={{ height: '100%', paddingX: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
           {value.length > 0 ? (
-            <Box sx={{ width:'250px'}}>
+            <Box sx={{ width: '250px' }}>
               <Slider  {...settings}>
                 {filteredCars.map((car, index) => (
                   <Card key={index} elevation={0} sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start' }}>
@@ -74,41 +76,49 @@ export function Main({ value }: MainProps) {
                     </CardContent>
                     <Image src={car.imageUrl} alt="Logo" width={350} height={250} />
                     <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 2 }}>
-                      <Button size="small" sx={{ fontWeight: 700 }} >Learn <KeyboardArrowRight /></Button>
-                      <Button size="small" sx={{ fontWeight: 700 }} >Shop <KeyboardArrowRight /></Button>
+                      <Link href={`/learn/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                        <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>LEARN</Typography> <KeyboardArrowRight />
+                      </Link>
+                      <Link href={`/shop/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                        <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>SHOP</Typography> <KeyboardArrowRight />
+                      </Link>
                     </CardActions>
                   </Card>
                 ))}
               </Slider>
             </Box>
-            
+
           ) :
             (
-              <Box sx={{ width:'250px'}}>
+              <Box sx={{ width: '250px' }}>
                 <Slider  {...settings}>
-                {cars.map((car, index) => (
-                  <Card key={index} elevation={0} sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start' }}>
-                    <CardContent sx={{ textAlign: 'start', padding: 0, marginBottom: 2 }}>
-                      <Typography gutterBottom variant="h6" component="div" color="text.secondary" sx={{ fontWeight: 700 }} >
-                        {car.bodyType}
-                      </Typography>
-                      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
-                        <Typography variant="h6" color="text.primary" sx={{ fontWeight: 700 }}>
-                          {car.modelName}
+                  {cars.map((car, index) => (
+                    <Card key={index} elevation={0} sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start' }}>
+                      <CardContent sx={{ textAlign: 'start', padding: 0, marginBottom: 2 }}>
+                        <Typography gutterBottom variant="h6" component="div" color="text.secondary" sx={{ fontWeight: 700 }} >
+                          {car.bodyType}
                         </Typography>
-                        <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 500 }}>
-                          {car.modelType}
-                        </Typography>
-                      </Box>
-                    </CardContent>
-                    <Image src={car.imageUrl} alt="Logo" width={350} height={250} />
-                    <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 2 }}>
-                      <Button size="small" sx={{ fontWeight: 700 }} >Learn <KeyboardArrowRight /></Button>
-                      <Button size="small" sx={{ fontWeight: 700 }} >Shop <KeyboardArrowRight /></Button>
-                    </CardActions>
-                  </Card>
-                ))}
-              </Slider>
+                        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
+                          <Typography variant="h6" color="text.primary" sx={{ fontWeight: 700 }}>
+                            {car.modelName}
+                          </Typography>
+                          <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 500 }}>
+                            {car.modelType}
+                          </Typography>
+                        </Box>
+                      </CardContent>
+                      <Image src={car.imageUrl} alt="Logo" width={350} height={250} />
+                      <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 2 }}>
+                        <Link href={`/learn/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                          <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>LEARN</Typography> <KeyboardArrowRight />
+                        </Link>
+                        <Link href={`/shop/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                          <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>SHOP</Typography> <KeyboardArrowRight />
+                        </Link>
+                      </CardActions>
+                    </Card>
+                  ))}
+                </Slider>
               </Box>
             )}
         </Box >
@@ -139,8 +149,12 @@ export function Main({ value }: MainProps) {
                       </CardContent>
                       <Image src={car.imageUrl} alt="Logo" width={350} height={250} />
                       <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 2 }}>
-                        <Button size="small" sx={{ fontWeight: 700 }} >Learn <KeyboardArrowRight /></Button>
-                        <Button size="small" sx={{ fontWeight: 700 }} >Shop <KeyboardArrowRight /></Button>
+                        <Link href={`/learn/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                          <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>LEARN</Typography> <KeyboardArrowRight />
+                        </Link>
+                        <Link href={`/shop/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                          <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>SHOP</Typography> <KeyboardArrowRight />
+                        </Link>
                       </CardActions>
                     </Card>
                   </Grid>
@@ -177,9 +191,13 @@ export function Main({ value }: MainProps) {
                           </Box>
                         </CardContent>
                         <Image src={car.imageUrl} alt="Logo" width={350} height={250} />
-                        <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 2 }}>
-                          <Button size="small" sx={{ fontWeight: 700 }} >Learn <KeyboardArrowRight /></Button>
-                          <Button size="small" sx={{ fontWeight: 700 }} >Shop <KeyboardArrowRight /></Button>
+                        <CardActions sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2, marginTop: 2 }}>
+                          <Link href={`/learn/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                            <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>LEARN</Typography> <KeyboardArrowRight />
+                          </Link>
+                          <Link href={`/shop/${car.id}`} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }} >
+                            <Typography sx={{ fontWeight: 700, textAlign: 'center' }}>SHOP</Typography> <KeyboardArrowRight />
+                          </Link>
                         </CardActions>
                       </Card>
                     </Grid>

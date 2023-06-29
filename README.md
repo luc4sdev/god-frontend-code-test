@@ -9,10 +9,10 @@ The objective of the project is to create a Volvo page with design for desktop a
 
 ## 🚀 Project link hosted at Vercel (click to enter)
 
-<a href="https://api-deslocamento-gtz3m2vkb-luc4sdev.vercel.app/" target="_blank" rel="external">
+<a href="https://volvo-test-5b1656q6p-luc4sdev.vercel.app/" target="_blank" rel="external">
 <img src="public/images/project-image.png" height="400" width="800" alt="Imagem do Projeto">
 </a>
-<h2>Link: <a href="https://api-deslocamento-gtz3m2vkb-luc4sdev.vercel.app/" target="_blank" rel="external">Click here</a></h2>
+<h2>Link: <a href="https://volvo-test-5b1656q6p-luc4sdev.vercel.app/" target="_blank" rel="external">Click here</a></h2>
 
 
 --- 
